@@ -1,0 +1,10 @@
+.Search-container{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-image: url('../../assets/images/search2.jpg');
+  background-size: cover;
+}
+.Search-inputs{
+  padding-top: 100px;
+}

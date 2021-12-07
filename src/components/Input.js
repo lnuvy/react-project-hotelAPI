@@ -1,3 +1,5 @@
+import React from "react";
+import './CSS/Input.css'
 
 const Input = ({ ...rest }) => {
   const { name, type, placeholder, value, onChange, width, min, max } = rest;
