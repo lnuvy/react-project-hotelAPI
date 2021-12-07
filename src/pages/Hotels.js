@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import { fetchHotelsCom, isArrayNull } from 'lib'
+import { HotelItem } from 'components'
 
 import hotelsData from '../hotelsData'
 import './CSS/Hotels.css'
@@ -28,7 +29,13 @@ const Hotels = () => {
   }
 
   return (
-    <div>Hotels Page</div>
+    <div className="Hotels-container">
+      {!isArrayNull(hotels) && hotels.map( hotel => {
+        return (
+          <HotelItem hotel={hotel} key={hotel.id} />
+        )
+      })}
+    </div>
   )
 }
 

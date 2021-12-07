@@ -1,7 +1,12 @@
 
-// 주어진 배열의 길이가 0인지 검사하는 헬퍼함수 (디폴트로 선언하지 않았음)
+// 주어진 배열의 길이가 0인지 검사
 const isArrayNull = (array) => {
   return array.length === 0
 }
 
-export { isArrayNull }
+// 전달된 객체가 undefined 일때 빈객체 반환
+const handleNullObj = (obj) => {
+  return obj || {}
+}
+
+export { isArrayNull, handleNullObj }
