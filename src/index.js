@@ -1,10 +1,18 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Search, Hotels, HotelInfo, NotFound } from 'pages'
 
 const App = () => {
     return (
-      <div>Hello React !</div>
+      <div>
+        <Routes>
+          <Route path='/' element={<Search />} />
+          <Route path='/hotels' element={<Hotels />} />
+          <Route path='/hotelInfo' element={<HotelInfo />} />
+          <Route path='/*' element={<NotFound />} />
+        </Routes>
+      </div>
     );
   };
   
